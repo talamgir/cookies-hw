@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cookies HW</title>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/Cookies.js/1.2.1/cookies.js'></script>
+	
+</head>
+<body>
+
+	<form name="myform" action="">
+		Enter name: <input type="text" name="customer"/>
+		<input type="button" value="Set Cookie" onclick="myCookie();"/>
+	</form>	
+
+	<script type="text/javascript">
+     
+            function myCookie()	{
+               if( document.myform.customer.value == "" ){
+                  alert("Enter some value!");
+                  return;
+               }
+               cookievalue= escape(document.myform.customer.value) + ";";
+               document.cookie="name=" + cookievalue;
+               document.write ("Setting Cookies : " + "name=" + cookievalue );
+            }
+   
+      </script>
+	
+</body>
+</html>
